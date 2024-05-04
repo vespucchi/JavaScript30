@@ -82,10 +82,17 @@
       return aLast - bLast;
     });
 
-    
+
     // 8. Reduce Exercise
     // Sum up the instances of each of these
     const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
+    const sumInstances = data.reduce((object, instance) => {
+      if(!object[instance]) object[instance] = 0;
+
+      object[instance]++;
+
+      return object;
+    }, {})
 
   </script>
 </body>
